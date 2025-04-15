@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: spring-boot-app-pod
+  labels:
+    role: spring-boot-app-pod
+spec:
+  containers:
+    - name: spring-boot-app-container
+      image: ram1uj/spring-boot-app
+      imagePullPolicy: IfNotPresent
+      ports:
+        - containerPort: 5000
+
